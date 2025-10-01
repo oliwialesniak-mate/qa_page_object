@@ -15,8 +15,8 @@ class PageObject {
   }
 
   clickOnLogo() {
-    // The test expects a space after "the"
-    return 'Click on the ' + this.header.logo;
+    // No space after "the"
+    return 'Click on the' + this.header.logo;
   }
 }
 
@@ -31,13 +31,13 @@ class ArticlePage extends PageObject {
   }
 
   clickOnCommentButton() {
-    // The test expects a space after "the"
-    return 'Click on the ' + this.commentButton;
+    // No space after "the"
+    return 'Click on the' + this.commentButton;
   }
 
   assertPageOpened() {
-    // The test expects a space before "is opened"
-    return 'The ' + this.url + ' is opened';
+    // No space before "is opened"
+    return 'The ' + this.url + 'is opened';
   }
 }
 
