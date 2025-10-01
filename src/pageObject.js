@@ -15,14 +15,15 @@ class PageObject {
   }
 
   clickOnLogo() {
-    return 'Click on the' + this.header.logo; // Removed space before logo
+    // The test expects a space after "the"
+    return 'Click on the ' + this.header.logo;
   }
 }
 
 // ArticlePage class extending PageObject
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url + slug); // optional improvement: pass concatenated URL to super
+    super(url + slug); // URL concatenated and passed to parent
   }
 
   get commentButton() {
@@ -30,11 +31,13 @@ class ArticlePage extends PageObject {
   }
 
   clickOnCommentButton() {
-    return 'Click on the' + this.commentButton; // Removed space before button
+    // The test expects a space after "the"
+    return 'Click on the ' + this.commentButton;
   }
 
   assertPageOpened() {
-    return 'The ' + this.url + 'is opened'; // Removed space before "is"
+    // The test expects a space before "is opened"
+    return 'The ' + this.url + ' is opened';
   }
 }
 
