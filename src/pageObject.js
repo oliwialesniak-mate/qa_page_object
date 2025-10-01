@@ -15,15 +15,14 @@ class PageObject {
   }
 
   clickOnLogo() {
-    // No space after "the"
-    return 'Click on the' + this.header.logo;
+    return 'Click on the ' + this.header.logo; // space after "the"
   }
 }
 
 // ArticlePage class extending PageObject
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url + slug); // URL concatenated and passed to parent
+    super(url + slug); // pass concatenated URL to parent
   }
 
   get commentButton() {
@@ -31,13 +30,11 @@ class ArticlePage extends PageObject {
   }
 
   clickOnCommentButton() {
-    // No space after "the"
-    return 'Click on the' + this.commentButton;
+    return 'Click on the ' + this.commentButton; // space after "the"
   }
 
   assertPageOpened() {
-    // No space before "is opened"
-    return 'The ' + this.url + 'is opened';
+    return 'The ' + this.url + ' is opened'; // space before "is opened"
   }
 }
 
